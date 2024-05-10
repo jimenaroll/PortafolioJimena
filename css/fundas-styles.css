@@ -1,0 +1,152 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* COLORES */
+/* #C0CFE0 - AZUL
+   #C5C463 - NARANJA
+   #F2AF3F - AMARILLO
+   #FFA090 - BEIGE
+   #EF5356 - ROJO  
+*/
+
+@import url(https://db.onlinewebfonts.com/c/ce0272ed48a4c133bc9a16545b0c6c74?family=Neon+80s);
+
+body {
+  font-family: "Neon 80s";
+  background-color: #ffffff;
+}
+
+/* ESTILOS DE LA BARRA DE NAVEGACIÓN */
+.nav-scnd-row {
+  padding: 1% 0;
+}
+
+.nav-link {
+  width: 100%;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+}
+
+.nav-link-logo {
+  width: 25%;
+}
+/* FIN DE ESTILOS DE LA BARRA DE NAVEGACIÓN */
+
+/* ESTILOS DE GALLERY */
+.gallery {
+  padding: 5% 15%;
+}
+
+.col img {
+  opacity: 1;
+  display: block;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  box-shadow: 0px 11px 17px -1px rgba(0, 0, 0, 0.67);
+  width: 100%;
+}
+
+.col {
+  transition: 0.5s;
+}
+
+.col:hover {
+  scale: 1.08;
+}
+
+.contenedor {
+  position: relative;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.contenedor:hover img {
+  opacity: 0.3;
+}
+
+.contenedor:hover .middle {
+  opacity: 1;
+}
+
+/* FIN DE LOS ESTILO DE GALLERY */
+
+footer {
+  padding: 5%;
+  background-color: #ef5356;
+}
+
+footer a svg {
+  fill: #000;
+  width: 10%;
+  height: 10%;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 1000px) {
+  .nav-first-row {
+    flex-direction: row;
+  }
+
+  .nav-first-row .svg-icons {
+    width: 10%;
+    height: 10%;
+  }
+
+  .nav-first-row .nav-link-logo {
+    width: 40%;
+  }
+
+  .nav-scnd-row {
+    flex-direction: row;
+  }
+
+  .nav-scnd-row a {
+    font-size: 1rem;
+  }
+
+  .middle a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-scnd-row a {
+    font-size: 0.6rem;
+  }
+
+  .middle a {
+    font-size: 0.4rem;
+  }
+
+  footer a svg {
+    width: 15%;
+    height: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .middle a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  footer a svg {
+    width: 25%;
+    height: 25%;
+  }
+}
